@@ -20,7 +20,7 @@
       const email = document.getElementById("email").value.trim().toLowerCase();
       if (!email) return alert("Please enter your email.");
 
-      const res = await fetch('https://docs.google.com/spreadsheets/d/e/2PACX-1vTjUdxST8_export?format=csv');
+      const res = await fetch('https://docs.google.com/spreadsheets/d/1DQfBxoznyGfd9ElE0rrwRCTNIa7PGM-pN7eSHalPwv0/export?format=csv');
       const csv = await res.text();
       const rows = csv.split('\n').map(row => row.split(',')[0].trim().toLowerCase());
 
